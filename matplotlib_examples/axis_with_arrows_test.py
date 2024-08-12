@@ -35,12 +35,22 @@ from scipy import stats
 # arrows.drawPlot(x, y, xlim, ylim, xticks, yticks, showTicklabels=False)
 
 
-x = np.linspace(0, 8, 10000)
-y1 = stats.norm.pdf(x, 4, 1)
-y2 = stats.norm.cdf(x, 4, 1)
-y3 = [0.4 * v - 1.1 for v in x]
+# x = np.linspace(0, 8, 10000)
+# y1 = stats.norm.pdf(x, 4, 1)
+# y2 = stats.norm.cdf(x, 4, 1)
+# y3 = [0.4 * v - 1.1 for v in x]
 
-arrows.drawPlot(x, (y2, y3), arrows.axis_lim(0, 8), arrows.axis_lim(0, 1), 
-                arrows.axis_ticks(0, 8, 1), arrows.axis_ticks(0, 1.2, 0.2, False), 
+# arrows.drawPlot(x, (y2, y3), arrows.axis_lim(0, 8), arrows.axis_lim(0, 1), 
+#                 arrows.axis_ticks(0, 8, 1), arrows.axis_ticks(0, 1.2, 0.2, False), 
+#                 show_x_ticklabels=True, show_y_ticklabels=True,
+#                 figsize=(6, 6))
+
+
+x = np.arange(0, 25, 1)
+y1 = [6 for i in x]
+y2 = [5.8 for i in x]
+
+arrows.drawPlot(x, (y1, y2), arrows.axis_lim(0, 25), arrows.axis_lim(0, 7), 
+                arrows.axis_ticks(0, 25, 4), arrows.axis_ticks(0, 7, 2, False), 
                 show_x_ticklabels=True, show_y_ticklabels=True,
                 figsize=(6, 6))
